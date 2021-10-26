@@ -11,6 +11,7 @@ node{
         // for windows use bat instead of sh
         sh "${mavenHome}/bin/mvn clean package"
     }
+    /*
     stage('ExecuteSonarQubeReport'){
         sh "${mavenHome}/bin/mvn clean sonar:sonar"
     }
@@ -22,6 +23,7 @@ node{
         sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@13.211.133.164:/opt/apache-tomcat-9.0.54/webapps"
         }//closing sshagent
     }//closing deploy stage
+    */
     
     stage('SendEmailNotification'){
         mail bcc: 'alexchan22182019@gmail.com', body: '''This is the message !!
