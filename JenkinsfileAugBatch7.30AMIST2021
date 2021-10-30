@@ -12,7 +12,7 @@ node('wallmart-node')
   stage('Build'){
   sh "${mavenHome}/bin/mvn clean package"
   }
-/*
+
  stage('ExecuteSoanrQubeReport'){
   sh "${mavenHome}/bin/mvn clean sonar:sonar"
   }
@@ -28,7 +28,7 @@ node('wallmart-node')
   }
    }
   
-  
+  /*
  
   stage('SendEmailNotification'){
    mail bcc: 'devopstrainingblr@gmail.com', body: '''Build Over !!
