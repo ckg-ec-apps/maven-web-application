@@ -28,6 +28,7 @@ node('wallmart-node')
   }
    }
   
+  
  
   stage('SendEmailNotification'){
    mail bcc: 'devopstrainingblr@gmail.com', body: '''Build Over !!
